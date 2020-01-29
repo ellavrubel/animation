@@ -1,0 +1,63 @@
+body{
+    padding: 3rem;
+    margin: 5rem;
+}
+
+.content__circle{
+    height: 10rem;
+    width: 10rem;
+    background-color: rgba(133, 103, 231, 0.69);
+    border-radius: 50%;
+    position: relative;
+    left: 0;
+
+    /*animation-name: myCircle;*/
+    /*animation-duration: 7s;*/
+    /*animation-timing-function: linear;*/
+    /*animation-iteration-count: 1;*/
+    /*animation-direction: alternate;*/
+    /*animation-delay: -2s;  !*запускает анимацию с середины цикла*!*/
+    /*animation-fill-mode: forwards; !*останавливает объект в конце анимации и не возвращает его в исходнуюю точку*!*/
+
+    /* Краткая запсись*/
+    animation:myCircle 7s linear infinite alternate 2s,redCircle 7s linear infinite alternate 2s;
+
+}
+
+.content:hover .content__circle{
+    /*animation-play-state: paused;*/
+    /*animation-name: none;*/
+}
+
+@keyframes myCircle {
+
+    0%{
+        left: 0;
+    }
+
+    50%{
+        border-radius: 0;
+
+
+    }
+
+    100%{
+        left: 80rem;
+
+    }
+}
+
+@keyframes redCircle {
+
+    0%{
+        background-color: antiquewhite;
+
+    }
+    50%{
+        background-color: aquamarine;
+
+    }
+    100%{
+        background-color: olive;
+    }
+}
